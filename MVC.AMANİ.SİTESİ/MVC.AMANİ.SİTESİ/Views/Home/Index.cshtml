@@ -1,0 +1,35 @@
+﻿@using MVC.AMANİ.SİTESİ.Models;
+@model IEnumerable<ProductModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-3">Hoş geldiniz <span class="renk"> DALAL'a!</span> </h1> 
+        <p class="lead">
+            <b> Dalal, Al-Gharbani Vakfı'na bağlı bir Yemen e-ticaret markasıdır. Ticari kayıt numarası: 4044630310 - aksesuar ve bakım ürünleri satışı - Sana'a </b>
+            .
+        </p>
+        <hr class="my-4">
+        <p>Üyeliğinizi bize kaydedin ve sitedeki tüm ürünlerde %10 #indirim kazanın.</p>
+        <p class="lead">
+            <a class="btn btn-warning active btn-lg" href="/Home/Hakkımızda" role="button">Learn more</a>
+        </p>
+    </div>
+</div>
+
+
+
+<div class="container pb-5">
+
+    @Html.Partial("_ProductList",Model)
+
+</div>
+
+       
+ 
+   
+
+
+

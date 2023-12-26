@@ -1,0 +1,37 @@
+﻿@using MVC.AMANİ.SİTESİ.Models;
+@model IEnumerable<ProductModel>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<div class="container pd-5">
+
+    <div class="row">
+
+        <div class="col-md-3">
+           @Html.Action("GetCategories","Home")
+        </div>
+
+        <div class="col-md-9">
+            @if (Model.Count() == 0)
+            {
+                <div class="alert alert-warning" role="alert">
+                    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                    Bu kategoride ürün bulanamadı.
+                </div>
+            }
+            else
+            {
+        <div class="alert alert-warning" role="alert">
+            <i class="fa fa-check-square-o" aria-hidden="true"></i>
+            <b>@Model.Count() Adet </b>ürün bulundu.
+        </div>
+               
+            }
+
+            @Html.Partial("_ProductList", Model)
+
+        </div>
+    </div>
+</div>
